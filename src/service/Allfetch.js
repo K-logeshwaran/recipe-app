@@ -12,11 +12,10 @@
   
 //     return [value, setValue]
 //   }
-//const key = "7c4f88478c984f8bab8d38837a634a06"
-//const key = "c10f37f433c44188b5e9287283f81aff"
-const key = "9c0a9a261144444695bf68a87e5cb7e2"
+
+const key = "your Api Key"
 export async function fetchByCusine(setter,cuisine){
-    // const [cache,setCache] = useSessionStorage(cuisine)
+    
     let cache = localStorage.getItem(cuisine)
     if(cache){
       setter(cache);
@@ -26,10 +25,7 @@ export async function fetchByCusine(setter,cuisine){
         let data = await res.json()
         console.log(data.results);
         localStorage.setItem(cuisine,JSON.stringify(data.results))
-        // console.log(localStorage.getItem(cuisine));
-        // console.log(JSON.parse(localStorage.getItem(cuisine)));
         setter(JSON.parse(localStorage.getItem(cuisine)));
-        //setCache(data.results)
         console.log(data);
       }catch(err){
         console.log(err);
@@ -56,7 +52,7 @@ export async function fetchType(){
     console.log("gotted2");
   }else{
     try{
-      let res2 =await fetch("https://api.spoonacular.com/recipes/random?apiKey=9c0a9a261144444695bf68a87e5cb7e2&number=90&tags=nonvegetarian")
+      let res2 =await fetch("https://api.spoonacular.com/recipes/random?apiKey=your-api-key&number=90&tags=nonvegetarian")
       let data2 = await res2.json()
       localStorage.setItem("nonveg",JSON.stringify(data2))
     }catch(err){
