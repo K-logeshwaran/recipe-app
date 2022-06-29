@@ -12,7 +12,7 @@ function Recipe() {
         if(cache){
             setter(JSON.parse(cache))
         }else{
-            let res = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=9c0a9a261144444695bf68a87e5cb7e2`)
+            let res = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=your-api-key`)
             let data = await res.json()
             sessionStorage.setItem(String(id),JSON.stringify(data))
             setData(data)
