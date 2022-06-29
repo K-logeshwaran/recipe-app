@@ -1,3 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-style: italic;
+  color: #fff;  
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+b,li{
+  color: burlywood;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +19,194 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://www.springhappenings.com/wp-content/uploads/2014/09/crsrxfllostehmuxwzqfkdarpcg0di40toehyl4mzmgrkmy3dpfzxttukvsmluvp-o.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: gray;
+  background-blend-mode: multiply;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav-bar{
+  padding: 1rem;
+  width: 100%;
+}
+
+.nav-bar h1{
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.nav-bar h3{
+  font-style: italic;
+}
+
+.grid{
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  padding: 1rem;
+  height: 85vh;
+}
+
+.cusine-inp{
+  width: 15em;
+  text-align: center;
+  align-self: center;
+  color: black;
+  padding: .3 rem;
+  
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 60%;
+}
+
+.list button{
+  border: none;
+  width: 90%;
+  padding: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bolder; 
+}
+
+.showcase{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  grid-auto-rows: minmax(150px, auto);
+  flex-basis: 60%;
+  margin: auto;
+  height: 85vh;
+  overflow: scroll
+}
+.showcase::-webkit-scrollbar{
+  display: none;
+}
+.img-card{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-color: #C8C8C8;
+  background-blend-mode: multiply;
+  border-radius: 25px;
+  min-width: 15%;
+  max-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center ;  
+  cursor: pointer;
+}
+.img-card
+h6{
+  text-align: center;
+  font-size: 1rem;
+  color: #f2f2f2;
+  padding: 1rem;
+}
+
+.type{
+  padding: 1rem;
+  text-transform: capitalize;
+  display: block;
+}
+
+.detail{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.details-right{
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.details-right img{
+  width: 70%;
+  align-self: center;
+}
+
+.details-left{
+  flex-basis: 40%;
+}
+
+.details-btns{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.details-btns button{
+  background-color: transparent;
+  padding: .6rem;
+  cursor: pointer;
+  border: 1px solid black;
+  color: bisque;
+  background-color: rgba(214, 26, 26, 0.3);
+}
+
+.details-btns button:focus{
+  background-color: brown;
+  color: #fff;
+}
+
+.summary{
+  padding: 1rem;
+  text-align: center;
+}
+
+.procedure{
+  padding: 2rem;
+  text-align: center;
+  height: 500px;
+  overflow: scroll;
+  margin: 1rem;
+}
+
+.procedure::-webkit-scrollbar{display: none;}
+
+.procedure li{
+  padding: .5rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.ingredient{
+  max-height: 440px;
+  overflow: auto;
+  width: 200px;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.ing-itm{
+  text-align: center;
+  padding: .5rem;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.ingredient::-webkit-scrollbar{
+  display: none;
 }
