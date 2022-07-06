@@ -37,20 +37,6 @@ function SideBar() {
                 >{e}</button>
                 </NavLink>)}
             </div>
-            <div className="list" style={{"minHeight":"30%"}}>
-            <h1>Type:</h1>
-                <NavLink to={'/'}>
-                    <button 
-                        onClick={e=>value.setCuisine('Veg')}
-                    >Vegetarian-Picks</button>
-                </NavLink>
-                <NavLink to={'/'}>
-                <button
-                     onClick={e=>value.setCuisine('Non-Veg')}
-                >NonVegetarian-Picks</button>
-                </NavLink>
-                
-            </div>
         </section>
      );
 }
